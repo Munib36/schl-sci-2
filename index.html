@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Culminating Project</title>
+    <style>
+:root{
+	--color: #D24545;
+    --red:   #be3e5c;
+    --white: #ece2d0;
+    --blue: #8b8bae;
+}    
+body{
+    margin: 0px;
+    margin-bottom: 500px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+nav{
+	position: absolute;
+	background-color: transparent;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	grid-template-rows: 1fr;
+
+	color: rgb(180, 180, 180);
+
+	align-items: center;
+
+	padding: 0px 10px;
+}
+*::before,
+*::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+nav > .title{
+	font-size: 18px;
+	padding: 0px 10px;
+	font-weight: bold;
+	display: inline-block;
+	text-decoration: none;
+	color: rgb(180, 180, 180);
+}
+.title:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -5px;
+	transition: 0.3s;
+}
+
+.title:hover:after{
+	width: 100%;
+}
+.title:hover{
+	color: white;
+	cursor: pointer;
+}
+nav div{
+	display: flex;
+	margin-left: auto;
+	float: right;
+	width: min-content;
+}
+nav div a{
+	color: rgb(180, 180, 180);
+	padding: 0px 10px;
+	text-decoration: none;
+}
+nav div a:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+nav div a:hover{
+	color: white;
+	cursor: pointer;
+}
+nav div a:hover:after{
+	width: 100%;
+}
+	    nav div a{
+	color: rgb(180, 180, 180);
+	padding: 0px 10px;
+}
+nav div a:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+
+
+
+nav div button{
+	color: rgb(180, 180, 180);
+	padding: 0px 10px;
+	border: none;
+	background-color: transparent;
+	text-decoration: none;
+	font-size: 16px;
+}
+nav div button:active{
+	transform: 0;
+}
+nav div button:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+nav div button:hover{
+	color: white;
+	cursor: pointer;
+}
+nav div button:hover:after{
+	width: 100%;
+}
+/*& Background picture */
+main{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+
+    top: 0px;
+
+    z-index: -1;
+}
+main img{
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+
+    z-index: -1;
+}
+
+/*& letter */
+#circle{
+    position: inherit;
+
+
+    transform: translateX(-50%);
+    top: -190px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+
+    fill: var(--color);
+
+    opacity: 1;
+}
+.list li{
+    margin-bottom: 6px
+}
+.page{
+    width: 90%;
+    
+
+    margin-left: 5%;
+
+    background-color: var(--color);
+
+    position: absolute;
+    top: 120vh;
+
+    text-align: center;
+    color: var(--white);
+
+    box-shadow: 0px 2px 4px 1px rgb(83, 83, 83);
+}
+#triangle{
+    width: 0;
+    height: 0;
+
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+    
+
+    border-bottom: 100px solid var(--color);
+
+    position: inherit;
+    top: -100px;
+}
+
+
+
+.bottomtriangle1{
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+    
+    background-color: transparent;
+
+    border-left: 0 solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 100px solid var(--color);
+}
+
+.bottomtriangle2{
+    position: absolute;
+    bottom: -100px;
+    right: 0px;
+    
+    
+    background-color: transparent;
+
+    border-left: 50vw solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 100px solid var(--color);
+}
+#circle{
+    position: inherit;
+
+
+    transform: translateX(-50%);
+    top: -190px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+
+    fill: var(--color);
+
+    opacity: 1;
+}
+.sources a{
+    color: white;
+}
+
+
+    </style>
+  </head>
+  <body>
+	  <nav class="navbar">
+		  <a class="title" href="https://munib.netlify.app">Munib</a>
+
+		  <div>
+			  <a href="https://munib.netlify.app">About</a>
+			  <a href="https://munib.netlify.app">Portfolio</a>
+			  <button class="falsebutton" onClick={contact}>Contact</button>
+		  </div>
+	  </nav>
+	  <main>
+		<img src="canvas.png" />
+          </main>
+
+	  
+	<div class="page">
+        <svg id="circle" class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/>
+        </svg>
+             <div id="triangle"></div>
+
+        <h1>CFCs & The Ozone</h1>
+	<hr style="width: 90%; align-self: center;">
+		<p>ChloroFluoroCarbons (CFCs)</p>
+	<img style="margin-top: 10px; filter: invert(97%);" src="./chlorofluorocarbon01.png"/>
+	
+	<h2>Why are CFCs harmful to our atmosphere?</h2>
+	<p style="text-align: left; padding: 0px 100px">
+		CFCs slowly rise due to density, once they reach the stratospere they get broken down by strong ultra-violet radiation from the sun and release harmful chlorine into the air
+	</p>
+
+	  <h2>How are the CFCs being </h2>
+	  <p style="text-align: left; padding: 0px 100px;">
+		The flashlight helps us in our lives in many ways, for example illuminating your way through at night for example when hiking or when the lights are cut off,
+		  unfortunately the components do cause harm to our environment but its extremely small compared to other commercially available things,
+		  the flash light is extremely helpful in the social aspect, for example look around, many light emitting devices are used even during the day
+	  </p>
+
+
+		<p class="sources">sources and knowledge was brought and paraphrased from <a href="https://www.energizer.com/about-flashlights/how-does-a-flashlight-work#:~:text=In%20most%20flashlights%2C%20the%20lamp,it%2C%20thus%20producing%20visible%20light.">energizer.com</a> and <a href="https://www.windowo.co.uk/blog/torch#:~:text=The%20invention%20of%20the%20modern%20flashlight&text=The%20inventor%20of%20the%20torch,Electrical%20Novelty%20and%20Manufacturing%20Company.">windowo.co.uk</a></p>
+		
+            <div class="bottomtriangle1"></div>
+            <div class="bottomtriangle2"></div>
+        </div>
+
+        
+    </div>
+	  
+	<script>
+		let opacity = 1;
+let y = window.pageYOffset;
+let circle = document.getElementById("circle")
+let triangle = document.getElementById("triangle")
+
+if(y > 400){
+    opacity = 0;
+    circle.style.opacity = opacity;
+}else{
+    opacity = 1 - (y/400);
+    circle.style.opacity = opacity;
+}
+
+window.addEventListener("scroll",()=>{
+    y = window.pageYOffset;
+    if(y > 400){
+        opacity = 0;
+        circle.style.opacity = opacity;
+    }else{
+        opacity = 1 - (y/400);
+        circle.style.opacity = opacity;
+        
+    }
+})
+
+function contact() {
+  window.scroll(0, window.scrollY + 100);
+}
+	</script>
+  </body>
+</html>
